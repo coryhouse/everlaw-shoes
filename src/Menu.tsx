@@ -5,6 +5,11 @@ import { Card } from "./reusable/Card";
 export function Menu() {
   const [tagFilter, setTagFilter] = useState<FoodTag | null>(null);
 
+  // Derived state
+  const filteredFoods = tagFilter
+    ? foods.filter((food) => food.tags.includes(tagFilter))
+    : foods;
+
   function renderFood(food: Food) {
     return (
       <Card>
@@ -18,17 +23,19 @@ export function Menu() {
   return (
     <>
       <h1>Menu</h1>
-      {tagFilter}
+      <label htmlFor="tag-filter-select">Filter by tag</label>
+      <br />
       <select
+        id="tag-filter-select"
         value={tagFilter ?? ""}
         onChange={(event) => setTagFilter(event.target.value as FoodTag)}
       >
-        <option value="">Filter by tag</option>
+        <option value="">All items</option>
         {foodTags.map((tag) => (
           <option value={tag}>{tag}</option>
         ))}
       </select>
-      <div className="flex flex-wrap">{foods.map(renderFood)}</div>
+      <div className="flex flex-wrap">{filteredFoods.map(renderFood)}</div>
     </>
   );
 }
