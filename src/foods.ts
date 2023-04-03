@@ -6,16 +6,19 @@ export type Food = {
   tags: Array<FoodTag>;
 };
 
-export type FoodTag =
-  | "Breakfast"
-  | "Lunch"
-  | "Dinner"
-  | "Dessert"
-  | "Drink"
-  | "Appetizer"
-  | "Spicy"
-  | "Vegetarian"
-  | "Alcoholic";
+export const foodTags = [
+  "Breakfast",
+  "Lunch",
+  "Dinner",
+  "Dessert",
+  "Drink",
+  "Appetizer",
+  "Spicy",
+  "Vegetarian",
+  "Alcoholic",
+] as const;
+
+type FoodTag = typeof foodTags[number];
 
 export const foods: Array<Food> = [
   {

@@ -1,4 +1,4 @@
-import { Food, foods } from "./foods";
+import { Food, foodTags, foods } from "./foods";
 import { Card } from "./reusable/Card";
 
 export function Menu() {
@@ -15,6 +15,12 @@ export function Menu() {
   return (
     <>
       <h1>Menu</h1>
+      <select>
+        <option>Filter by tag</option>
+        {foodTags.map((tag) => (
+          <option>{tag}</option>
+        ))}
+      </select>
       <div className="flex flex-wrap">{foods.map(renderFood)}</div>
     </>
   );
