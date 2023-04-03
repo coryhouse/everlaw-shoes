@@ -1,4 +1,5 @@
 type CardProps = {
+  /** Content to display inside the Card  */
   children: React.ReactNode;
 };
 
