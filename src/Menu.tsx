@@ -3,7 +3,7 @@ import { Food, FoodTag, foodTags, foods } from "./foods";
 import { Card } from "./reusable/Card";
 
 export function Menu() {
-  const [tagFilter, setTagFilter] = useState<FoodTag | null>(null);
+  const [tagFilter, setTagFilter] = useState<FoodTag | "">("");
 
   // Derived state
   const filteredFoods = tagFilter
@@ -27,7 +27,7 @@ export function Menu() {
       <br />
       <select
         id="tag-filter-select"
-        value={tagFilter ?? ""}
+        value={tagFilter}
         onChange={(event) => setTagFilter(event.target.value as FoodTag)}
       >
         <option value="">All items</option>
