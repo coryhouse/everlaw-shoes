@@ -12,7 +12,7 @@ export function Menu() {
 
   function renderFood(food: Food) {
     return (
-      <Card>
+      <Card key={food.name}>
         <h2 className="text-2xl font-bold">{food.name}</h2>
         <p>{food.description}</p>
         <strong>${food.price}</strong>
@@ -32,7 +32,9 @@ export function Menu() {
       >
         <option value="">All items</option>
         {foodTags.map((tag) => (
-          <option value={tag}>{tag}</option>
+          <option key={tag} value={tag}>
+            {tag}
+          </option>
         ))}
       </select>
 
