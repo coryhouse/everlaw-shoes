@@ -35,6 +35,11 @@ export function Menu() {
           <option value={tag}>{tag}</option>
         ))}
       </select>
+
+      {tagFilter && (
+        <p>{`${filteredFoods.length} ${tagFilter} items found.`}</p>
+      )}
+
       <div className="flex flex-wrap">{filteredFoods.map(renderFood)}</div>
     </>
   );
