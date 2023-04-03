@@ -18,7 +18,7 @@ export const foodTags = [
   "Alcoholic",
 ] as const;
 
-type FoodTag = typeof foodTags[number];
+export type FoodTag = typeof foodTags[number];
 
 export const foods: Array<Food> = [
   {

@@ -1,7 +1,10 @@
-import { Food, foodTags, foods } from "./foods";
+import { useState } from "react";
+import { Food, FoodTag, foodTags, foods } from "./foods";
 import { Card } from "./reusable/Card";
 
 export function Menu() {
+  const [tagFilter, setTagFilter] = useState<FoodTag | null>(null);
+
   function renderFood(food: Food) {
     return (
       <Card>
@@ -15,10 +18,14 @@ export function Menu() {
   return (
     <>
       <h1>Menu</h1>
-      <select>
-        <option>Filter by tag</option>
+      {tagFilter}
+      <select
+        value={tagFilter ?? ""}
+        onChange={(event) => setTagFilter(event.target.value as FoodTag)}
+      >
+        <option value="">Filter by tag</option>
         {foodTags.map((tag) => (
-          <option>{tag}</option>
+          <option value={tag}>{tag}</option>
         ))}
       </select>
       <div className="flex flex-wrap">{foods.map(renderFood)}</div>
