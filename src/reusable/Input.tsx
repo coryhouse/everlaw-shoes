@@ -4,13 +4,22 @@ type InputProps = {
 
   /** Input label */
   label: string;
+
+  /** Input type */
+  type?: "text" | "number";
 };
 
-export function Input(props: InputProps) {
+export function Input({ id, label, type = "text" }: InputProps) {
   return (
-    <div>
-      <label htmlFor={props.id}>{props.label}</label>
-      <input id={props.id} type="text" className="border" />
+    <div className="m-4">
+      <label className="block" htmlFor={id}>
+        {label}
+      </label>
+      <input
+        id={id}
+        type={type}
+        className="p-1 border border-black rounded-sm"
+      />
     </div>
   );
 }

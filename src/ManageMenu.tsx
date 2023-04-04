@@ -8,7 +8,7 @@ export default function ManageMenu() {
       <form>
         <Input id="name" label="Name" />
         <Input id="description" label="Description" />
-        <Input id="price" label="Price" />
+        <Input id="price" label="Price" type="number" />
       </form>
     </>
   );
