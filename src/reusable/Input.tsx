@@ -11,7 +11,7 @@ type InputProps = {
 
 export function Input({ id, label, type = "text" }: InputProps) {
   return (
-    <div className="m-4">
+    <div className="mb-4">
       <label className="block" htmlFor={id}>
         {label}
       </label>
