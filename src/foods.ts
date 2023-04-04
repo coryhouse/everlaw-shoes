@@ -1,4 +1,5 @@
 export type Food = {
+  id: number;
   name: string;
   image: string;
   price: number;
@@ -22,6 +23,7 @@ export type FoodTag = typeof foodTags[number];
 
 export const foods: Array<Food> = [
   {
+    id: 1,
     name: "Burger",
     image: "burger.jpg",
     price: 8.99,
@@ -30,6 +32,7 @@ export const foods: Array<Food> = [
     tags: ["Lunch", "Dinner"],
   },
   {
+    id: 2,
     name: "Banana Blueberry French Toast",
     image: "banana-french-toast.jpg",
     price: 9.99,
@@ -37,6 +40,7 @@ export const foods: Array<Food> = [
     tags: ["Breakfast"],
   },
   {
+    id: 3,
     name: "Cajun Pasta",
     image: "cajun-pasta.jpg",
     price: 16.99,
@@ -44,6 +48,7 @@ export const foods: Array<Food> = [
     tags: ["Lunch", "Dinner", "Spicy"],
   },
   {
+    id: 4,
     name: "Charcuterie Board",
     image: "charcuterie.jpg",
     price: 14.99,
@@ -52,6 +57,7 @@ export const foods: Array<Food> = [
     tags: ["Appetizer"],
   },
   {
+    id: 5,
     name: "Raspberry Cheesecake",
     image: "cheesecake.jpg",
     price: 7.99,
@@ -59,6 +65,7 @@ export const foods: Array<Food> = [
     tags: ["Dessert"],
   },
   {
+    id: 6,
     name: "Chicken Slammer",
     image: "chicken-slammer.jpg",
     price: 11.99,
@@ -67,6 +74,7 @@ export const foods: Array<Food> = [
     tags: ["Lunch", "Dinner", "Spicy"],
   },
   {
+    id: 7,
     name: "Death by Chocolate",
     image: "death-by-chocolate.jpg",
     price: 8.99,
@@ -75,6 +83,7 @@ export const foods: Array<Food> = [
     tags: ["Dessert"],
   },
   {
+    id: 8,
     name: "Pile 'O Donuts",
     image: "donuts.jpg",
     price: 6.99,
@@ -82,6 +91,7 @@ export const foods: Array<Food> = [
     tags: ["Dessert"],
   },
   {
+    id: 9,
     name: "Italian Meatballs",
     image: "italian-meatballs.jpg",
     description: "Spiced meatballs served with a rich tomato sauce.",
@@ -89,6 +99,7 @@ export const foods: Array<Food> = [
     tags: ["Dinner"],
   },
   {
+    id: 10,
     name: "Lamb Chop",
     image: "lamb-chop.jpg",
     description: "Delicious lamb chop topped with a Mango chutney.",
@@ -96,6 +107,7 @@ export const foods: Array<Food> = [
     tags: ["Dinner"],
   },
   {
+    id: 11,
     name: "Mango Lassi",
     image: "mango-lassi.jpg",
     description: "Creamy Mango-flavored delight, served ice cold.",
@@ -103,6 +115,7 @@ export const foods: Array<Food> = [
     tags: ["Drink"],
   },
   {
+    id: 12,
     name: "Mojito",
     image: "mojito.jpg",
     description: "A refreshing minty cocktail.",
@@ -110,6 +123,7 @@ export const foods: Array<Food> = [
     tags: ["Drink", "Alcoholic"],
   },
   {
+    id: 13,
     name: "Old Fashioned",
     image: "old-fashioned.jpg",
     description: "A classic cocktail with a twist.",
@@ -117,6 +131,7 @@ export const foods: Array<Food> = [
     tags: ["Drink", "Alcoholic"],
   },
   {
+    id: 14,
     name: "Pesto Bowtie Pasta",
     image: "pesto-bowtie-pasta.jpg",
     description:
@@ -125,6 +140,7 @@ export const foods: Array<Food> = [
     tags: ["Lunch", "Dinner"],
   },
   {
+    id: 15,
     name: "BBQ Chicken Pizza",
     image: "pizza.jpg",
     description:
@@ -133,6 +149,7 @@ export const foods: Array<Food> = [
     tags: ["Lunch", "Dinner"],
   },
   {
+    id: 16,
     name: "Pork Chop",
     image: "pork-chop.jpg",
     description: "Thick-cut Pork Chop with a sweet apple glaze.",
@@ -140,6 +157,7 @@ export const foods: Array<Food> = [
     tags: ["Dinner"],
   },
   {
+    id: 17,
     name: "Pork Ramen",
     image: "ramen.jpg",
     description: "Delicious bowl of ramen with pork and vegetables.",
@@ -147,6 +165,7 @@ export const foods: Array<Food> = [
     tags: ["Lunch", "Dinner"],
   },
   {
+    id: 18,
     name: "Salmon Salad",
     image: "salmon-salad.jpg",
     description:
@@ -155,6 +174,7 @@ export const foods: Array<Food> = [
     tags: ["Lunch", "Dinner", "Vegetarian"],
   },
   {
+    id: 19,
     name: "Salmon Steak",
     image: "salmon.jpg",
     description: "Seared salmon steak topped with a sweet mango glaze.",
@@ -162,6 +182,7 @@ export const foods: Array<Food> = [
     tags: ["Dinner"],
   },
   {
+    id: 20,
     name: "Chicken Street Tacos",
     image: "street-tacos.jpg",
     description: "Delicious chicken tacos with a spicy mango salsa.",
@@ -169,6 +190,7 @@ export const foods: Array<Food> = [
     tags: ["Lunch", "Dinner", "Spicy"],
   },
   {
+    id: 21,
     name: "Veggie Sammy",
     image: "veggie-sammy.jpg",
     description: "Fresh grilled veggies on our homemade toasted sourdough.",
