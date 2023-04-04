@@ -12,7 +12,7 @@ export function Menu() {
 
   function renderFood(food: Food) {
     return (
-      <Card key={food.name}>
+      <Card key={food.id}>
         <h2 className="text-2xl font-bold">{food.name}</h2>
         <p>{food.description}</p>
         <strong>${food.price}</strong>
