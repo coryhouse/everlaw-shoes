@@ -4,11 +4,16 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "start": "npm-run-all --parallel start:*",
+    "start:ui": "vite",
+    "start:api": "json-server --watch db.json --port 3001",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
+    "cross-env": "^7.0.3",
+    "json-server": "^0.17.3",
+    "npm-run-all": "^4.1.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
