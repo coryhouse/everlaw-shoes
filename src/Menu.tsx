@@ -1,9 +1,16 @@
-import { useState } from "react";
-import { Food, FoodTag, foodTags, foods } from "./foods";
+import { useEffect, useState } from "react";
+import { Food, FoodTag, foodTags } from "./foods";
 import { Card } from "./reusable/Card";
+import { getFoods } from "./services/foods.service";
 
 export function Menu() {
   const [tagFilter, setTagFilter] = useState<FoodTag | "">("");
+  const [foods, setFoods] = useState<Food[]>([]);
+
+  useEffect(() => {
+    getFoods().then((foods) => setFoods(foods));
+    // Empty array means only run this once after the first render.
+  }, []);
 
   // Derived state
   const filteredFoods = tagFilter
