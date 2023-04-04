@@ -7,4 +7,5 @@ it("should support adding a new menu item", () => {
   cy.findByLabelText("Price").type("10");
   cy.findByRole("button", { name: "Save Menu Item" }).click();
   cy.findByRole("status").should("have.text", "Menu Item Saved.");
+  cy.findByRole("heading", { name: "New Menu Item" });
 });

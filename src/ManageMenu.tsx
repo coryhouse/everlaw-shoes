@@ -1,8 +1,11 @@
 import toast from "react-hot-toast";
 import { Button } from "./reusable/Button";
 import { Input } from "./reusable/Input";
+import { useNavigate } from "react-router-dom";
 
 export default function ManageMenu() {
+  const navigate = useNavigate();
+
   return (
     <>
       <h1>Manage Menu</h1>
@@ -11,6 +14,7 @@ export default function ManageMenu() {
         onSubmit={(event) => {
           event.preventDefault();
           toast.success("Menu Item Saved.");
+          navigate("/");
         }}
       >
         <Input id="name" label="Name" />
