@@ -4,9 +4,11 @@ import { Menu } from "./Menu";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ManageMenu from "./ManageMenu";
 import { Nav } from "./Nav";
+import { Toaster } from "react-hot-toast";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <BrowserRouter>
+    <Toaster />
     <Nav />
     <Routes>
       <Route path="/" element={<Menu />} />
