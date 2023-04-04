@@ -5,12 +5,12 @@
   "type": "module",
   "scripts": {
     "start": "npm-run-all --parallel start:*",
-    "start:ui": "vite",
+    "start:ui": "vite --port 3000",
     "start:api": "json-server --watch db.json --port 3001",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "cy:open": "cypress open",
-    "cy": "start-server-and-test start 3000 cy:open"
+    "cy": "start-server-and-test start http://localhost:3000 cy:open"
   },
   "dependencies": {
     "@testing-library/cypress": "^9.0.0",
