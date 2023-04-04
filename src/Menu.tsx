@@ -8,7 +8,11 @@ export function Menu() {
   const [foods, setFoods] = useState<Food[]>([]);
 
   useEffect(() => {
-    getFoods().then((foods) => setFoods(foods));
+    async function fetchFoods() {
+      const foods = await getFoods();
+      setFoods(foods);
+    }
+    fetchFoods();
     // Empty array means only run this once after the first render.
   }, []);
 
