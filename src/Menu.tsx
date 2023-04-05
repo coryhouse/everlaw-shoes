@@ -32,6 +32,7 @@ export function Menu() {
         <p>{food.description}</p>
         <strong>${food.price}</strong>
         <Button
+          className="block"
           onClick={() => {
             // Optimistic delete
             deleteFood(food.id);
