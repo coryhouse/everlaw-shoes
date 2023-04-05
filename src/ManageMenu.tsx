@@ -27,9 +27,9 @@ export default function ManageMenu() {
       <h1>Manage Menu</h1>
 
       <form
-        onSubmit={(event) => {
+        onSubmit={async (event) => {
           event.preventDefault();
-          postFood(food);
+          await postFood(food);
           toast.success("Menu Item Saved.");
           navigate("/");
         }}
