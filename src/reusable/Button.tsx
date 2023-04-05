@@ -1,8 +1,12 @@
+export const buttonTypes = ["button", "submit"] as const;
+
+type ButtonType = typeof buttonTypes[number];
+
 type ButtonProps = {
   children: React.ReactNode;
 
   /** Button type */
-  type: "button" | "submit";
+  type: ButtonType;
 };
 
 export function Button({ children, type }: ButtonProps) {
