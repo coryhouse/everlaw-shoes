@@ -6,7 +6,10 @@
       "image": "burger.jpg",
       "price": 8.99,
       "description": "This ain't your average burger. Topped with our tangy cheddar cheese sauce, fresh lettuce, and tomato.",
-      "tags": ["Lunch", "Dinner"]
+      "tags": [
+        "Lunch",
+        "Dinner"
+      ]
     },
     {
       "id": 2,
@@ -14,7 +17,9 @@
       "image": "banana-french-toast.jpg",
       "price": 9.99,
       "description": "Delicious french toast with banana and blueberry.",
-      "tags": ["Breakfast"]
+      "tags": [
+        "Breakfast"
+      ]
     },
     {
       "id": 3,
@@ -22,7 +27,11 @@
       "image": "cajun-pasta.jpg",
       "price": 16.99,
       "description": "Creole-style pasta that's guaranteed to make you sweat.",
-      "tags": ["Lunch", "Dinner", "Spicy"]
+      "tags": [
+        "Lunch",
+        "Dinner",
+        "Spicy"
+      ]
     },
     {
       "id": 4,
@@ -30,7 +39,9 @@
       "image": "charcuterie.jpg",
       "price": 14.99,
       "description": "Delicious assortment of locally-sourced meats, cheeses, and spreads.",
-      "tags": ["Appetizer"]
+      "tags": [
+        "Appetizer"
+      ]
     },
     {
       "id": 5,
@@ -38,7 +49,9 @@
       "image": "cheesecake.jpg",
       "price": 7.99,
       "description": "Heavenly cheesecake with a sweet raspberry topping.",
-      "tags": ["Dessert"]
+      "tags": [
+        "Dessert"
+      ]
     },
     {
       "id": 6,
@@ -46,7 +59,11 @@
       "image": "chicken-slammer.jpg",
       "price": 11.99,
       "description": "Our outrageous chicken sandwich topped with pickled onions and jalapenos.",
-      "tags": ["Lunch", "Dinner", "Spicy"]
+      "tags": [
+        "Lunch",
+        "Dinner",
+        "Spicy"
+      ]
     },
     {
       "id": 7,
@@ -54,7 +71,9 @@
       "image": "death-by-chocolate.jpg",
       "price": 8.99,
       "description": "Decadent chocolate pudding topped with chocolate cookies, chocolate frosting, and whipped cream.",
-      "tags": ["Dessert"]
+      "tags": [
+        "Dessert"
+      ]
     },
     {
       "id": 8,
@@ -62,7 +81,9 @@
       "image": "donuts.jpg",
       "price": 6.99,
       "description": "Delicious assortment of unique donuts. Guaranteed to please!",
-      "tags": ["Dessert"]
+      "tags": [
+        "Dessert"
+      ]
     },
     {
       "id": 9,
@@ -70,7 +91,9 @@
       "image": "italian-meatballs.jpg",
       "description": "Spiced meatballs served with a rich tomato sauce.",
       "price": 13.99,
-      "tags": ["Dinner"]
+      "tags": [
+        "Dinner"
+      ]
     },
     {
       "id": 10,
@@ -78,7 +101,9 @@
       "image": "lamb-chop.jpg",
       "description": "Delicious lamb chop topped with a Mango chutney.",
       "price": 19.99,
-      "tags": ["Dinner"]
+      "tags": [
+        "Dinner"
+      ]
     },
     {
       "id": 11,
@@ -86,7 +111,9 @@
       "image": "mango-lassi.jpg",
       "description": "Creamy Mango-flavored delight, served ice cold.",
       "price": 4.99,
-      "tags": ["Drink"]
+      "tags": [
+        "Drink"
+      ]
     },
     {
       "id": 12,
@@ -94,7 +121,10 @@
       "image": "mojito.jpg",
       "description": "A refreshing minty cocktail.",
       "price": 6.99,
-      "tags": ["Drink", "Alcoholic"]
+      "tags": [
+        "Drink",
+        "Alcoholic"
+      ]
     },
     {
       "id": 13,
@@ -102,7 +132,10 @@
       "image": "old-fashioned.jpg",
       "description": "A classic cocktail with a twist.",
       "price": 7.99,
-      "tags": ["Drink", "Alcoholic"]
+      "tags": [
+        "Drink",
+        "Alcoholic"
+      ]
     },
     {
       "id": 14,
@@ -110,7 +143,10 @@
       "image": "pesto-bowtie-pasta.jpg",
       "description": "Delicious whole wheat pasta topped with our zesty pesto sauce.",
       "price": 12.99,
-      "tags": ["Lunch", "Dinner"]
+      "tags": [
+        "Lunch",
+        "Dinner"
+      ]
     },
     {
       "id": 15,
@@ -118,7 +154,10 @@
       "image": "pizza.jpg",
       "description": "Our homemade thin-crust pizza topped with BBQ chicken and our house cheese blend.",
       "price": 14.99,
-      "tags": ["Lunch", "Dinner"]
+      "tags": [
+        "Lunch",
+        "Dinner"
+      ]
     },
     {
       "id": 16,
@@ -126,7 +165,9 @@
       "image": "pork-chop.jpg",
       "description": "Thick-cut Pork Chop with a sweet apple glaze.",
       "price": 16.99,
-      "tags": ["Dinner"]
+      "tags": [
+        "Dinner"
+      ]
     },
     {
       "id": 17,
@@ -134,7 +175,10 @@
       "image": "ramen.jpg",
       "description": "Delicious bowl of ramen with pork and vegetables.",
       "price": 11.99,
-      "tags": ["Lunch", "Dinner"]
+      "tags": [
+        "Lunch",
+        "Dinner"
+      ]
     },
     {
       "id": 18,
@@ -142,7 +186,11 @@
       "image": "salmon-salad.jpg",
       "description": "Fresh salad topped with grilled salmon, mixed vegetables, and our house vinaigrette.",
       "price": 14.99,
-      "tags": ["Lunch", "Dinner", "Vegetarian"]
+      "tags": [
+        "Lunch",
+        "Dinner",
+        "Vegetarian"
+      ]
     },
     {
       "id": 19,
@@ -150,7 +198,9 @@
       "image": "salmon.jpg",
       "description": "Seared salmon steak topped with a sweet mango glaze.",
       "price": 18.99,
-      "tags": ["Dinner"]
+      "tags": [
+        "Dinner"
+      ]
     },
     {
       "id": 20,
@@ -158,7 +208,11 @@
       "image": "street-tacos.jpg",
       "description": "Delicious chicken tacos with a spicy mango salsa.",
       "price": 9.99,
-      "tags": ["Lunch", "Dinner", "Spicy"]
+      "tags": [
+        "Lunch",
+        "Dinner",
+        "Spicy"
+      ]
     },
     {
       "id": 21,
@@ -166,7 +220,11 @@
       "image": "veggie-sammy.jpg",
       "description": "Fresh grilled veggies on our homemade toasted sourdough.",
       "price": 8.99,
-      "tags": ["Lunch", "Dinner", "Vegetarian"]
+      "tags": [
+        "Lunch",
+        "Dinner",
+        "Vegetarian"
+      ]
     }
   ]
 }
