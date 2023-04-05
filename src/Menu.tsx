@@ -33,6 +33,7 @@ export function Menu() {
         <strong>${food.price}</strong>
         <Button
           onClick={() => {
+            // Optimistic delete
             deleteFood(food.id);
             setFoods(foods.filter((f) => f.id !== food.id));
           }}
