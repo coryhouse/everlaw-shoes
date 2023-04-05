@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { Food, FoodTag, foodTags } from "./foods";
 import { Card } from "./reusable/Card";
-import { getFoods } from "./services/foods.service";
+import { deleteFood, getFoods } from "./services/foods.service";
+import { Button } from "./reusable/Button";
 
 export function Menu() {
   const [tagFilter, setTagFilter] = useState<FoodTag | "">("");
@@ -27,6 +28,16 @@ export function Menu() {
         <h2 className="text-2xl font-bold">{food.name}</h2>
         <p>{food.description}</p>
         <strong>${food.price}</strong>
+        <Button
+          onClick={() => {
+            deleteFood(food.id);
+            setFoods(foods.filter((f) => f.id !== food.id));
+          }}
+          type="button"
+          aria-label={"Delete " + food.name}
+        >
+          Delete
+        </Button>
       </Card>
     );
   }
