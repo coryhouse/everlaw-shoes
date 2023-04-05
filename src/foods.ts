@@ -20,3 +20,5 @@ export const foodTags = [
 ] as const;
 
 export type FoodTag = typeof foodTags[number];
+
+export type NewFood = Omit<Food, "id">;
