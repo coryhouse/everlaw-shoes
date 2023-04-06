@@ -1,6 +1,6 @@
 type SpinnerProps = {
   isLoading: boolean;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 };
 
 /** Renders children when isLoading is false. */

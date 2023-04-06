@@ -19,6 +19,7 @@ export default function ManageMenu() {
   const [food, setFood] = useState<Food | NewFood>(newFood);
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(true);
+  const [isSaving, setIsSaving] = useState(false);
   const navigate = useNavigate();
   const { id } = useParams();
 
@@ -49,6 +50,7 @@ export default function ManageMenu() {
       <form
         onSubmit={async (event) => {
           event.preventDefault();
+          setIsSaving(true);
           id ? await putFood(food as Food) : await postFood(food);
           toast.success("Menu Item Saved.");
           navigate("/");
@@ -68,7 +70,8 @@ export default function ManageMenu() {
           value={food.price.toString()}
           onChange={onChange}
         />
-        <Button type="submit">Save Menu Item</Button>
+        <Button type="submit">{isSaving ? "Saving" : "Save"} Menu Item</Button>
+        {isSaving && <Spinner isLoading={isSaving} />}
       </form>
     );
   }
