@@ -1,10 +1,10 @@
 import toast from "react-hot-toast";
 import { Button } from "./reusable/Button";
 import { Input } from "./reusable/Input";
-import { useLocation, useNavigate } from "react-router-dom";
-import { postFood } from "./services/foods.service";
-import { NewFood } from "./foods";
-import { useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import { getFood, postFood, putFood } from "./services/foods.service";
+import { Food, NewFood } from "./foods";
+import { useEffect, useState } from "react";
 
 const newFood: NewFood = {
   name: "",
@@ -15,11 +15,19 @@ const newFood: NewFood = {
 };
 
 export default function ManageMenu() {
-  const [food, setFood] = useState(newFood);
+  const [food, setFood] = useState<Food | NewFood>(newFood);
   const navigate = useNavigate();
-  const location = useLocation();
+  const { id } = useParams();
 
-  const id = location.pathname.replace("/manage/", "");
+  useEffect(() => {
+    async function fetchFood() {
+      if (!id) return;
+      // if (!Number.isInteger(id)) throw new Error("Invalid id");
+      const food = await getFood(parseInt(id, 10));
+      setFood(food);
+    }
+    fetchFood();
+  }, []);
 
   function onChange(event: React.ChangeEvent<HTMLInputElement>) {
     setFood({ ...food, [event.target.id]: event.target.value });
@@ -32,7 +40,7 @@ export default function ManageMenu() {
       <form
         onSubmit={async (event) => {
           event.preventDefault();
-          await postFood(food);
+          id ? await putFood(food as Food) : await postFood(food);
           toast.success("Menu Item Saved.");
           navigate("/");
         }}
