@@ -1,7 +1,7 @@
 import toast from "react-hot-toast";
 import { Button } from "./reusable/Button";
 import { Input } from "./reusable/Input";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { postFood } from "./services/foods.service";
 import { NewFood } from "./foods";
 import { useState } from "react";
@@ -17,6 +17,11 @@ const newFood: NewFood = {
 export default function ManageMenu() {
   const [food, setFood] = useState(newFood);
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const id = location.pathname.replace("/manage/", "");
+
+  debugger;
 
   function onChange(event: React.ChangeEvent<HTMLInputElement>) {
     setFood({ ...food, [event.target.id]: event.target.value });
