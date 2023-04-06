@@ -4,6 +4,7 @@ import { Card } from "./reusable/Card";
 import { deleteFood, getFoods } from "./services/foods.service";
 import { Button } from "./reusable/Button";
 import { Spinner } from "./reusable/Spinner";
+import { Link } from "react-router-dom";
 
 export function Menu() {
   const [tagFilter, setTagFilter] = useState<FoodTag | "">("");
@@ -28,7 +29,9 @@ export function Menu() {
   function renderFood(food: Food) {
     return (
       <Card key={food.id}>
-        <h2 className="text-2xl font-bold">{food.name}</h2>
+        <Link to={"/manage/" + food.id}>
+          <h2 className="text-2xl font-bold">{food.name}</h2>
+        </Link>
         <p>{food.description}</p>
         <strong>${food.price}</strong>
         <Button
