@@ -11,7 +11,7 @@ interface ButtonProps extends React.ComponentPropsWithoutRef<"button"> {
 
   children: React.ReactNode;
 
-  onClick: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+  onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 
   /** Button type */
   type: ButtonType;
