@@ -7,11 +7,7 @@ type ButtonType = typeof buttonTypes[number];
 // Extending so all valid props are accepted,
 // But specifying a few that we always want to require.
 interface ButtonProps extends React.ComponentPropsWithoutRef<"button"> {
-  ["aria-label"]?: string;
-
   children: React.ReactNode;
-
-  onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 
   /** Button type */
   type: ButtonType;
