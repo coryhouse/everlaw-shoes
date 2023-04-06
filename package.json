@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm-run-all --parallel start:*",
     "start:ui": "vite --port 3000",
-    "start:api": "json-server --watch db.json --port 3001",
+    "start:api": "json-server --watch db.json --port 3001 --delay 2000",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "cy:open": "cypress open",
@@ -16,6 +16,7 @@
   "dependencies": {
     "@testing-library/cypress": "^9.0.0",
     "@testing-library/jest-dom": "^5.16.5",
+    "clsx": "^1.2.1",
     "cross-env": "^7.0.3",
     "jsdom": "^21.1.1",
     "json-server": "^0.17.3",
