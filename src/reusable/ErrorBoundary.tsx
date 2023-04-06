@@ -6,7 +6,10 @@ type ErrorBoundaryProps = {
 
 export function ErrorBoundary({ children }: ErrorBoundaryProps) {
   return (
-    <ReactErrorBoundary fallback={<h1>Sorry, an error occurred.</h1>}>
+    <ReactErrorBoundary
+      onReset={(details) => {}}
+      fallback={<h1>Sorry, an error occurred.</h1>}
+    >
       {children}
     </ReactErrorBoundary>
   );

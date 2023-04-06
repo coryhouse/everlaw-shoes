@@ -10,12 +10,17 @@ export function Menu() {
   const [tagFilter, setTagFilter] = useState<FoodTag | "">("");
   const [foods, setFoods] = useState<Food[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState("");
 
   useEffect(() => {
     async function fetchFoods() {
-      const foods = await getFoods();
-      setFoods(foods);
-      setIsLoading(false);
+      try {
+        const foods = await getFoods();
+        setFoods(foods);
+        setIsLoading(false);
+      } catch (error) {
+        setError("Fetch failed.");
+      }
     }
     fetchFoods();
     // Empty array means only run this once after the first render.
@@ -76,6 +81,9 @@ export function Menu() {
       </>
     );
   }
+
+  // This will trigger the error boundary.
+  if (error) throw new Error(error);
 
   return (
     <>
