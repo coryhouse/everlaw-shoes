@@ -28,6 +28,6 @@ it("should support adding and removing a menu item", () => {
   cy.findByText("$11");
 
   // Now delete it.
-  cy.findByLabelText("Delete New Menu Item").click();
-  cy.findByRole("heading", { name: "New Menu Item" }).should("not.exist");
+  cy.findByLabelText("Delete New Menu Item2").click();
+  cy.findByRole("heading", { name: "New Menu Item2" }).should("not.exist");
 });
