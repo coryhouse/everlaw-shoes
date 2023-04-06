@@ -78,7 +78,7 @@ export default function ManageMenu() {
   return (
     <>
       <h1>{id ? "Edit" : "Add"} Menu Item</h1>
-      {!isLoading ? renderForm() : <Spinner />}
+      <Spinner isLoading={isLoading}>{renderForm()}</Spinner>
     </>
   );
 }
