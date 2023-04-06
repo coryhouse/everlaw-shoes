@@ -16,7 +16,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
     <main>
       <Routes>
         <Route path="/" element={<Menu />} />
-        <Route path="/manage" element={<ManageMenu />} />
+        <Route path="/manage/:id?" element={<ManageMenu />} />
       </Routes>
     </main>
     <footer>Copyright 2023</footer>
