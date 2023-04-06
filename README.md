@@ -3,7 +3,6 @@
 1. Validation
 1. Loading state
 1. React-query (caching, retries), and [7 alternatives](https://twitter.com/housecor/status/1536340396560760833)
-1. React dev tools / related dev tools
 1. Images
 1. Use env var for API URL
 1. Zod - Schema validation and form validation
