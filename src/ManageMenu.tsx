@@ -5,6 +5,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { getFood, postFood, putFood } from "./services/foods.service";
 import { Food, NewFood } from "./foods";
 import { useEffect, useState } from "react";
+import { Spinner } from "./reusable/Spinner";
 
 const newFood: NewFood = {
   name: "",
@@ -17,16 +18,21 @@ const newFood: NewFood = {
 export default function ManageMenu() {
   const [food, setFood] = useState<Food | NewFood>(newFood);
   const [error, setError] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
   const navigate = useNavigate();
   const { id } = useParams();
 
   useEffect(() => {
     async function fetchFood() {
       try {
-        if (!id) return;
+        if (!id) {
+          setIsLoading(false);
+          return;
+        }
         // if (!Number.isInteger(id)) throw new Error("Invalid id");
         const food = await getFood(parseInt(id, 10));
         setFood(food);
+        setIsLoading(false);
       } catch (error) {
         setError("Fetch failed.");
       }
@@ -38,12 +44,8 @@ export default function ManageMenu() {
     setFood({ ...food, [event.target.id]: event.target.value });
   }
 
-  if (error) throw new Error(error);
-
-  return (
-    <>
-      <h1>Manage Menu</h1>
-
+  function renderForm() {
+    return (
       <form
         onSubmit={async (event) => {
           event.preventDefault();
@@ -68,6 +70,15 @@ export default function ManageMenu() {
         />
         <Button type="submit">Save Menu Item</Button>
       </form>
+    );
+  }
+
+  if (error) throw new Error(error);
+
+  return (
+    <>
+      <h1>{id ? "Edit" : "Add"} Menu Item</h1>
+      {!isLoading ? renderForm() : <Spinner />}
     </>
   );
 }
