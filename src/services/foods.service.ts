@@ -19,7 +19,7 @@ export async function postFood(newFood: NewFood): Promise<Food> {
 
 export async function putFood(food: Food): Promise<Food> {
   return ky
-    .put("http://localhost:3001/foods", {
+    .put("http://localhost:3001/foods/" + food.id, {
       json: food,
     })
     .json();
