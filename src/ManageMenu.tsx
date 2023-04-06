@@ -16,15 +16,20 @@ const newFood: NewFood = {
 
 export default function ManageMenu() {
   const [food, setFood] = useState<Food | NewFood>(newFood);
+  const [error, setError] = useState("");
   const navigate = useNavigate();
   const { id } = useParams();
 
   useEffect(() => {
     async function fetchFood() {
-      if (!id) return;
-      // if (!Number.isInteger(id)) throw new Error("Invalid id");
-      const food = await getFood(parseInt(id, 10));
-      setFood(food);
+      try {
+        if (!id) return;
+        // if (!Number.isInteger(id)) throw new Error("Invalid id");
+        const food = await getFood(parseInt(id, 10));
+        setFood(food);
+      } catch (error) {
+        setError("Fetch failed.");
+      }
     }
     fetchFood();
   }, []);
@@ -32,6 +37,8 @@ export default function ManageMenu() {
   function onChange(event: React.ChangeEvent<HTMLInputElement>) {
     setFood({ ...food, [event.target.id]: event.target.value });
   }
+
+  if (error) throw new Error(error);
 
   return (
     <>
