@@ -21,8 +21,6 @@ export default function ManageMenu() {
 
   const id = location.pathname.replace("/manage/", "");
 
-  debugger;
-
   function onChange(event: React.ChangeEvent<HTMLInputElement>) {
     setFood({ ...food, [event.target.id]: event.target.value });
   }
