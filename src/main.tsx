@@ -9,10 +9,16 @@ import { Toaster } from "react-hot-toast";
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <BrowserRouter>
     <Toaster />
-    <Nav />
-    <Routes>
-      <Route path="/" element={<Menu />} />
-      <Route path="/manage" element={<ManageMenu />} />
-    </Routes>
+    <header>
+      Logo
+      <Nav />
+    </header>
+    <main>
+      <Routes>
+        <Route path="/" element={<Menu />} />
+        <Route path="/manage" element={<ManageMenu />} />
+      </Routes>
+    </main>
+    <footer>Copyright 2023</footer>
   </BrowserRouter>
 );
