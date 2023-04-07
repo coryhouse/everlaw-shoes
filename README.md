@@ -1,13 +1,13 @@
 # Agenda
 
-1. Use env var for API URL
-1. Zod - Schema validation and form validation
-1. Error handling
+1. Login/i18n and React context
 1. useReducer
 1. useCallback
 1. useMemo
-1. Custom hooks
 1. Reusable component best practices
+1. Use env var for API URL
+1. Zod - Schema validation and form validation
+1. Error handling
 1. Storybook
 1. Images
 1. Cypress reusable commands and refactors
@@ -17,7 +17,6 @@
 1. Open source components
 1. Layout
 1. Extensions
-1. Login/i18n and React context
 1. Common state management mistakes
 1. Performance tips
 1. Other third party state management
