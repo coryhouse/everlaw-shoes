@@ -1,16 +1,18 @@
 import { useState } from "react";
 import { Food, FoodTag, foodTags } from "./foods";
 import { Card } from "./reusable/Card";
-import { deleteFood } from "./services/foods.service";
 import { Button } from "./reusable/Button";
 import { Spinner } from "./reusable/Spinner";
 import { Link } from "react-router-dom";
 import { useGetFoodsQuery } from "./hooks/useGetFoodsQuery";
+import { useDeleteFood } from "./hooks/useDeleteFood";
+import { toast } from "react-hot-toast";
 
 export function Menu() {
   const [tagFilter, setTagFilter] = useState<FoodTag | "">("");
 
   const getFoodsQuery = useGetFoodsQuery();
+  const deleteFoodMutation = useDeleteFood();
 
   // Derived state
   const filteredFoods = tagFilter
@@ -28,8 +30,8 @@ export function Menu() {
         <Button
           className="block"
           onClick={() => {
-            // Optimistic delete
-            deleteFood(food.id);
+            deleteFoodMutation.mutate(food.id);
+            toast.success("Food deleted. 🦄");
             // setFoods(foods.filter((f) => f.id !== food.id));
           }}
           type="button"

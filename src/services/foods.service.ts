@@ -20,7 +20,3 @@ export async function putFood(food: Food): Promise<Food> {
     })
     .json();
 }
-
-export async function deleteFood(id: number): Promise<void> {
-  return ky.delete("http://localhost:3001/foods/" + id).json();
-}
