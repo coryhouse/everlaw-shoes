@@ -1,21 +1,16 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Food, FoodTag, foodTags } from "./foods";
 import { Card } from "./reusable/Card";
-import { deleteFood, getFoods } from "./services/foods.service";
+import { deleteFood } from "./services/foods.service";
 import { Button } from "./reusable/Button";
 import { Spinner } from "./reusable/Spinner";
 import { Link } from "react-router-dom";
-import { useQuery } from "@tanstack/react-query";
+import { useGetFoodsQuery } from "./hooks/useGetFoodsQuery";
 
 export function Menu() {
   const [tagFilter, setTagFilter] = useState<FoodTag | "">("");
 
-  const getFoodsQuery = useQuery({
-    queryKey: ["foods"],
-    queryFn: getFoods,
-    useErrorBoundary: true,
-    initialData: [],
-  });
+  const getFoodsQuery = useGetFoodsQuery();
 
   // Derived state
   const filteredFoods = tagFilter

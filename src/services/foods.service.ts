@@ -1,10 +1,6 @@
 import ky from "ky";
 import { Food, NewFood } from "../foods";
 
-export async function getFoods(): Promise<Food[]> {
-  return ky.get("http://localhost:3001/foods").json();
-}
-
 export async function getFood(id: number): Promise<Food> {
   return ky.get("http://localhost:3001/foods/" + id).json();
 }
